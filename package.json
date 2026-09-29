@@ -1,0 +1,15 @@
+{
+  "name": "sk-website-builder",
+  "version": "1.0.0",
+  "description": "SK Website Builder Full-Stack Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  }
+}

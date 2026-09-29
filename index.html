@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Website Builder | Professional Web Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0f172a',
+                            950: '#020617'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- ================= PUBLIC AGENCY WEBSITE ================= -->
+    <div id="public-site">
+        <!-- Sticky Header / Navbar -->
+        <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <a href="#" class="text-2xl font-black text-white flex items-center gap-2">
+                    <i class="fa-solid fa-code text-blue-500"></i>
+                    <span>SK <span class="text-blue-500" id="site-logo-text">Builder</span></span>
+                </a>
+                <nav class="hidden md:flex gap-8 text-sm font-semibold text-slate-300">
+                    <a href="#services" class="hover:text-blue-400 transition">Services</a>
+                    <a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a>
+                    <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleCartDrawer()" class="relative bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-cart-shopping text-blue-400"></i>
+                        <span>Cart</span>
+                        <span id="cart-count-badge" class="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+                    </button>
+                    <a href="#pricing" class="hidden sm:inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 transition">Order Website</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-20 text-center px-4 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+            <div class="max-w-4xl mx-auto">
+                <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Bahawalpur-Based Global Web Agency</span>
+                <h1 class="text-4xl sm:text-6xl font-black mt-6 mb-6 tracking-tight text-white leading-tight">High-Converting Websites Built For Business Growth</h1>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">We deliver stunning, fast, and modern custom websites for local Pakistani businesses and international clients.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#pricing" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-blue-500/25 transition">Explore Pricing Plans</a>
+                    <a href="#portfolio" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-base px-8 py-4 rounded-xl border border-slate-700 transition">Our Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-slate-900/50 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold text-white">Our Services</h2>
+                    <p class="text-slate-400 mt-2">Tailored web design solutions designed for sales conversion.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-2xl">
+                        <i class="fa-solid fa-laptop-code text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Business Websites</h3>
+                        <p class="text-slate-400 text-sm">Professional multi-page websites to showcase your brand and generate corporate inquiries.</p>
+                    </div>
+                    <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-2xl">
+                        <i class="fa-solid fa-cart-shopping text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">E-Commerce Stores</h3>
+                        <p class="text-slate-400 text-sm">Online shops integrated with local payment options (Easypaisa/JazzCash) & automated checkouts.</p>
+                    </div>
+                    <div class="bg-slate-800/40 border border-slate-700/60 p-8 rounded-2xl">
+                        <i class="fa-solid fa-bullseye text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Landing Pages</h3>
+                        <p class="text-slate-400 text-sm">High-impact single-page sales funnels optimized for Pinterest, Facebook, and Google Ad campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-extrabold text-white">Recent Work Portfolio</h2>
+                    <p class="text-slate-400 mt-2">Explore custom website projects built for our clients.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="public-portfolio-grid">
+                    <!-- Dynamic Portfolio Projects injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-slate-900/40 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold text-white">Pricing Plans</h2>
+                    <p class="text-slate-400 mt-2">Affordable pricing for Pakistani & International clients.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8" id="public-pricing-grid">
+                    <!-- Dynamic Pricing Cards injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-800 bg-slate-950 py-12 text-slate-400 text-center text-sm">
+            <p>&copy; 2026 SK Website Builder. All Rights Reserved.</p>
+            <p class="mt-2 text-xs">Email: <span id="footer-email">saadjatoi012@gmail.com</span> | WhatsApp: <span id="footer-phone">+92 334 7763453</span></p>
+            <button onclick="showAdminLogin()" class="mt-6 text-xs text-slate-600 hover:text-slate-400 underline">Admin Panel Login</button>
+        </footer>
+    </div>
+
+    <!-- ================= CART DRAWER ================= -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 max-w-md w-full bg-slate-900 border-l border-slate-800 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+        <div class="p-6 overflow-y-auto">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-4">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping text-blue-500"></i> Your Selected Plan
+                </h3>
+                <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div id="cart-content-area" class="space-y-4">
+                <p class="text-slate-500 text-center text-sm py-8">Your cart is empty. Select a plan from pricing section!</p>
+            </div>
+        </div>
+        <div id="cart-footer-area" class="p-6 bg-slate-950 border-t border-slate-800 hidden">
+            <button onclick="proceedToCheckoutModal()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+    <div id="checkout-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="text-xl font-bold text-white mb-1">Complete Your Order</h3>
+            <p id="modal-plan-title" class="text-sm font-semibold text-blue-400 mb-6"></p>
+
+            <form onsubmit="handleCheckoutSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Full Name *</label>
+                    <input type="text" id="chk-name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Business / Project Name *</label>
+                    <input type="text" id="chk-business" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">Email Address *</label>
+                        <input type="email" id="chk-email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">WhatsApp Phone *</label>
+                        <input type="tel" id="chk-phone" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500" placeholder="03347763453">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Project Details & Requirements *</label>
+                    <textarea id="chk-reqs" rows="3" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500" placeholder="Describe the website features you need..."></textarea>
+                </div>
+
+                <!-- Payment Details Box -->
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-2">
+                    <p class="font-bold text-blue-400 uppercase tracking-wider text-[11px]">Payment Instructions:</p>
+                    <p><strong>JazzCash / Easypaisa:</strong> <span id="chk-easypaisa">03347763453 (Saad Ullah)</span></p>
+                    <p><strong>Bank Details:</strong> <span id="chk-bank">Bank Alfalah / Saad Ullah</span></p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Payment Reference / TRX ID (Optional)</label>
+                    <input type="text" id="chk-trx" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500" placeholder="e.g. TRX12345678">
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-emerald-500/20">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Confirm & Send on WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= ADMIN PANEL CONTAINER ================= -->
+    <div id="admin-panel" class="fixed inset-0 bg-slate-950 z-50 overflow-y-auto hidden">
+        <!-- Admin Login Screen -->
+        <div id="admin-login-screen" class="min-h-screen flex items-center justify-center p-4">
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl max-w-md w-full text-center shadow-2xl">
+                <i class="fa-solid fa-shield-halved text-4xl text-blue-500 mb-4"></i>
+                <h2 class="text-2xl font-bold text-white mb-1">SK Admin Portal</h2>
+                <p class="text-slate-400 text-sm mb-6">Enter password to manage agency orders</p>
+                <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                    <input type="password" id="admin-password" placeholder="Enter Password (123)" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-center text-lg focus:outline-none focus:border-blue-500">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition">Login to Dashboard</button>
+                </form>
+                <button onclick="hideAdminPanel()" class="mt-6 text-xs text-slate-500 hover:text-slate-300 underline">Back to Website</button>
+            </div>
+        </div>
+
+        <!-- Admin App View -->
+        <div id="admin-dashboard" class="hidden min-h-screen flex flex-col">
+            <!-- Header -->
+            <header class="bg-slate-900 border-b border-slate-800 px-6 py-4 flex justify-between items-center sticky top-0 z-30">
+                <div class="flex items-center gap-3">
+                    <span class="font-black text-white text-lg">SK Agency <span class="text-blue-500">Admin</span></span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="exportDataJSON()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-2 rounded-lg border border-slate-700">Backup JSON</button>
+                    <button onclick="adminLogout()" class="text-xs bg-red-600/20 text-red-400 hover:bg-red-600/30 px-3 py-2 rounded-lg border border-red-500/30">Logout</button>
+                </div>
+            </header>
+
+            <div class="flex-1 flex flex-col md:flex-row">
+                <!-- Sidebar -->
+                <aside class="w-full md:w-64 bg-slate-900/60 border-r border-slate-800 p-4 space-y-2">
+                    <button onclick="switchAdminTab('orders')" id="tab-btn-orders" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 bg-blue-600 text-white">
+                        <i class="fa-solid fa-list-check"></i> Orders Management
+                    </button>
+                    <button onclick="switchAdminTab('plans')" id="tab-btn-plans" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-400 hover:bg-slate-800">
+                        <i class="fa-solid fa-tags"></i> Pricing Plans
+                    </button>
+                    <button onclick="switchAdminTab('portfolio')" id="tab-btn-portfolio" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-400 hover:bg-slate-800">
+                        <i class="fa-solid fa-folder-open"></i> Portfolio Projects
+                    </button>
+                    <button onclick="switchAdminTab('settings')" id="tab-btn-settings" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-400 hover:bg-slate-800">
+                        <i class="fa-solid fa-gears"></i> Payments & Settings
+                    </button>
+                </aside>
+
+                <!-- Main Content Panel Area -->
+                <main class="flex-1 p-6 space-y-8 overflow-y-auto">
+                    
+                    <!-- TAB 1: ORDERS MANAGEMENT -->
+                    <div id="admin-tab-orders" class="space-y-6">
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                                <p class="text-xs font-semibold text-slate-400">Total Orders</p>
+                                <h4 id="stat-total-orders" class="text-2xl font-black text-white mt-1">0</h4>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                                <p class="text-xs font-semibold text-slate-400">Pending Orders</p>
+                                <h4 id="stat-pending-orders" class="text-2xl font-black text-amber-400 mt-1">0</h4>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                                <p class="text-xs font-semibold text-slate-400">Completed Orders</p>
+                                <h4 id="stat-completed-orders" class="text-2xl font-black text-emerald-400 mt-1">0</h4>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                                <p class="text-xs font-semibold text-slate-400">Estimated Revenue</p>
+                                <h4 id="stat-revenue" class="text-2xl font-black text-blue-400 mt-1">Rs. 0</h4>
+                            </div>
+                        </div>
+
+                        <!-- Orders Table -->
+                        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                            <div class="p-5 border-b border-slate-800 flex justify-between items-center">
+                                <h3 class="font-bold text-white">Client Orders</h3>
+                                <button onclick="clearAllOrders()" class="text-xs text-red-400 hover:underline">Clear Orders</button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm text-slate-300">
+                                    <thead class="bg-slate-950 text-xs uppercase text-slate-400 border-b border-slate-800">
+                                        <tr>
+                                            <th class="p-4">ID / Date</th>
+                                            <th class="p-4">Client Details</th>
+                                            <th class="p-4">Selected Plan</th>
+                                            <th class="p-4">TRX ID</th>
+                                            <th class="p-4">Status</th>
+                                            <th class="p-4">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="admin-orders-table-body" class="divide-y divide-slate-800">
+                                        <!-- Dynamic Orders injected via JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: PRICING PLANS MANAGEMENT -->
+                    <div id="admin-tab-plans" class="space-y-6 hidden">
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">Add New Pricing Plan</h3>
+                            <form onsubmit="handleAddNewPlan(event)" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <input type="text" id="new-plan-name" placeholder="Plan Name (e.g. Custom Portal)" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <input type="text" id="new-plan-usd" placeholder="Price USD ($)" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <input type="text" id="new-plan-pkr" placeholder="Price PKR (Rs.)" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <input type="text" id="new-plan-features" placeholder="Features (comma separated)" required class="md:col-span-2 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition">Save New Plan</button>
+                            </form>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">Active Pricing Plans</h3>
+                            <div id="admin-plans-list" class="space-y-4">
+                                <!-- Dynamic Plans List -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: PORTFOLIO MANAGEMENT -->
+                    <div id="admin-tab-portfolio" class="space-y-6 hidden">
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">Add Portfolio Project</h3>
+                            <form onsubmit="handleAddProject(event)" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" id="proj-title" placeholder="Project Title" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <input type="text" id="proj-cat" placeholder="Category (e.g. E-Commerce)" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <input type="url" id="proj-img" placeholder="Image URL" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <input type="url" id="proj-link" placeholder="Live Demo Link" required class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                <button type="submit" class="md:col-span-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-lg transition">Add Project</button>
+                            </form>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">Existing Projects</h3>
+                            <div id="admin-projects-list" class="grid md:grid-cols-2 gap-4">
+                                <!-- Dynamic Projects -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 4: SETTINGS & PAYMENTS -->
+                    <div id="admin-tab-settings" class="space-y-6 hidden">
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                            <h3 class="text-lg font-bold text-white mb-4">Agency Contact & Payment Settings</h3>
+                            <form onsubmit="handleSaveSettings(event)" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 mb-1">WhatsApp Number (For Redirects)</label>
+                                    <input type="text" id="set-phone" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 mb-1">Support Email</label>
+                                    <input type="email" id="set-email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 mb-1">Easypaisa / JazzCash Details</label>
+                                    <input type="text" id="set-easypaisa" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 mb-1">Bank Account Details</label>
+                                    <input type="text" id="set-bank" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white">
+                                </div>
+                                <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-lg transition">Save Settings</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT APP LOGIC ================= -->
+    <script>
+        // Initial LocalStorage Seeds
+        const defaultSettings = {
+            phone: '03347763453',
+            email: 'saadjatoi012@gmail.com',
+            easypaisa: '03347763453 (Saad Ullah)',
+            bank: 'Bank Alfalah - Saad Ullah'
+        };
+
+        const defaultPricing = [
+            { id: '1', name: 'Basic Plan', usd: '35', pkr: '6000', features: ['1-2 Responsive Pages', 'Mobile & Speed Optimized', 'WhatsApp Chat Button', 'Delivery in 3 Days'] },
+            { id: '2', name: 'Standard Plan', usd: '75', pkr: '12000', features: ['Up to 5 Custom Pages', 'Basic SEO Setup', 'Lead Contact Forms', 'Delivery in 5 Days'] },
+            { id: '3', name: 'Premium Plan', usd: '150', pkr: '25000', features: ['Full E-Commerce Portal', 'Online Payment Integration', 'Advanced SEO & Analytics', 'Delivery in 7-10 Days'] }
+        ];
+
+        const defaultPortfolio = [
+            { id: '1', title: 'Fashion Brand Store', category: 'E-Commerce', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80', link: '#' },
+            { id: '2', title: 'Tech Startup Site', category: 'Business', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80', link: '#' }
+        ];
+
+        // State variables
+        let selectedCartPlan = null;
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('sk_settings')) localStorage.setItem('sk_settings', JSON.stringify(defaultSettings));
+            if (!localStorage.getItem('sk_pricing')) localStorage.setItem('sk_pricing', JSON.stringify(defaultPricing));
+            if (!localStorage.getItem('sk_projects')) localStorage.setItem('sk_projects', JSON.stringify(defaultPortfolio));
+
+            renderPublicSite();
+        });
+
+        function getSettings() { return JSON.parse(localStorage.getItem('sk_settings')); }
+        function getPricing() { return JSON.parse(localStorage.getItem('sk_pricing')); }
+        function getProjects() { return JSON.parse(localStorage.getItem('sk_projects')); }
+        function getOrders() { return JSON.parse(localStorage.getItem('sk_agency_orders') || '[]'); }
+
+        // Render Public Site Dynamic Content
+        function renderPublicSite() {
+            const settings = getSettings();
+            document.getElementById('footer-phone').innerText = settings.phone;
+            document.getElementById('footer-email').innerText = settings.email;
+            document.getElementById('chk-easypaisa').innerText = settings.easypaisa;
+            document.getElementById('chk-bank').innerText = settings.bank;
+
+            // Render Pricing
+            const pricingGrid = document.getElementById('public-pricing-grid');
+            pricingGrid.innerHTML = '';
+            getPricing().forEach(plan => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <h3 class="text-xl font-bold text-white">${plan.name}</h3>
+                        <div class="mt-4 mb-6">
+                            <span class="text-4xl font-black text-white">$${plan.usd}</span>
+                            <span class="text-slate-400 font-semibold text-sm">/ Rs. ${parseInt(plan.pkr).toLocaleString()}</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            ${plan.features.map(f => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-500"></i> ${f}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <button onclick='addToCart(${JSON.stringify(plan)})' class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition">Select Plan</button>
+                `;
+                pricingGrid.appendChild(card);
+            });
+
+            // Render Portfolio
+            const projGrid = document.getElementById('public-portfolio-grid');
+            projGrid.innerHTML = '';
+            getProjects().forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden";
+                card.innerHTML = `
+                    <img src="${p.image}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">${p.category}</span>
+                        <h4 class="text-lg font-bold text-white mt-1">${p.title}</h4>
+                    </div>
+                `;
+                projGrid.appendChild(card);
+            });
+        }
+
+        // Cart Drawer Logic
+        function addToCart(plan) {
+            selectedCartPlan = plan;
+            document.getElementById('cart-count-badge').innerText = '1';
+            document.getElementById('cart-content-area').innerHTML = `
+                <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                    <h4 class="font-bold text-white">${plan.name}</h4>
+                    <p class="text-blue-400 font-bold mt-1">$${plan.usd} / Rs. ${parseInt(plan.pkr).toLocaleString()}</p>
+                </div>
+            `;
+            document.getElementById('cart-footer-area').classList.remove('hidden');
+            toggleCartDrawer();
+        }
+
+        function toggleCartDrawer() {
+            document.getElementById('cart-drawer').classList.toggle('translate-x-full');
+        }
+
+        function proceedToCheckoutModal() {
+            toggleCartDrawer();
+            document.getElementById('modal-plan-title').innerText = `Plan: ${selectedCartPlan.name} ($${selectedCartPlan.usd} / Rs. ${selectedCartPlan.pkr})`;
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        // Handle Order Checkout
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+            const settings = getSettings();
+            const order = {
+                id: 'SK-' + Math.floor(1000 + Math.random() * 9000),
+                date: new Date().toLocaleDateString(),
+                plan: selectedCartPlan.name + ` ($${selectedCartPlan.usd})`,
+                name: document.getElementById('chk-name').value,
+                business: document.getElementById('chk-business').value,
+                email: document.getElementById('chk-email').value,
+                phone: document.getElementById('chk-phone').value,
+                reqs: document.getElementById('chk-reqs').value,
+                trx: document.getElementById('chk-trx').value || 'Pending',
+                status: 'New'
+            };
+
+            let orders = getOrders();
+            orders.unshift(order);
+            localStorage.setItem('sk_agency_orders', JSON.stringify(orders));
+
+            // WhatsApp Message Redirection
+            const cleanPhone = settings.phone.replace(/[^0-9]/g, '');
+            const msg = `Hello SK Website Builder!%0A%0AI have placed a new website order:%0A- *Order ID:* ${order.id}%0A- *Name:* ${order.name}%0A- *Business:* ${order.business}%0A- *Plan:* ${order.plan}%0A- *TRX ID:* ${order.trx}`;
+            
+            window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
+
+            closeCheckoutModal();
+            alert('Order submitted successfully! WhatsApp conversation opened.');
+        }
+
+        // Admin Panel Authentication
+        function showAdminLogin() { document.getElementById('admin-panel').classList.remove('hidden'); }
+        function hideAdminPanel() { document.getElementById('admin-panel').classList.add('hidden'); }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const pwd = document.getElementById('admin-password').value;
+            if (pwd === '123') {
+                document.getElementById('admin-login-screen').classList.add('hidden');
+                document.getElementById('admin-dashboard').classList.remove('hidden');
+                renderAdminDashboard();
+            } else {
+                alert('Invalid Admin Password!');
+            }
+        }
+
+        function adminLogout() {
+            document.getElementById('admin-dashboard').classList.add('hidden');
+            document.getElementById('admin-login-screen').classList.remove('hidden');
+            hideAdminPanel();
+        }
+
+        // Switch Admin Tabs
+        function switchAdminTab(tab) {
+            ['orders', 'plans', 'portfolio', 'settings'].forEach(t => {
+                document.getElementById(`admin-tab-${t}`).classList.add('hidden');
+                document.getElementById(`tab-btn-${t}`).className = "w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-400 hover:bg-slate-800";
+            });
+
+            document.getElementById(`admin-tab-${tab}`).classList.remove('hidden');
+            document.getElementById(`tab-btn-${tab}`).className = "w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 bg-blue-600 text-white";
+        }
+
+        // Render Admin Views
+        function renderAdminDashboard() {
+            const orders = getOrders();
+            document.getElementById('stat-total-orders').innerText = orders.length;
+            document.getElementById('stat-pending-orders').innerText = orders.filter(o => o.status === 'New').length;
+            document.getElementById('stat-completed-orders').innerText = orders.filter(o => o.status === 'Completed').length;
+            document.getElementById('stat-revenue').innerText = 'Rs. ' + (orders.length * 12000).toLocaleString();
+
+            const tbody = document.getElementById('admin-orders-table-body');
+            tbody.innerHTML = '';
+            orders.forEach(o => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-4"><span class="font-bold text-white">${o.id}</span><br><span class="text-xs text-slate-500">${o.date}</span></td>
+                    <td class="p-4"><span class="font-bold text-white">${o.name}</span><br><span class="text-xs text-slate-400">${o.business} | ${o.phone}</span></td>
+                    <td class="p-4 text-blue-400 font-semibold">${o.plan}</td>
+                    <td class="p-4 text-xs font-mono">${o.trx}</td>
+                    <td class="p-4"><span class="bg-blue-500/10 text-blue-400 text-xs px-2.5 py-1 rounded-full font-bold">${o.status}</span></td>
+                    <td class="p-4 flex gap-2">
+                        <button onclick="updateOrderStatus('${o.id}', 'Confirmed')" class="bg-emerald-600 text-white text-xs px-2.5 py-1.5 rounded hover:bg-emerald-500">Confirm</button>
+                        <a href="https://wa.me/${o.phone.replace(/[^0-9]/g, '')}" target="_blank" class="bg-blue-600 text-white text-xs px-2.5 py-1.5 rounded hover:bg-blue-500"><i class="fa-brands fa-whatsapp"></i></a>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Fill Settings Form
+            const settings = getSettings();
+            document.getElementById('set-phone').value = settings.phone;
+            document.getElementById('set-email').value = settings.email;
+            document.getElementById('set-easypaisa').value = settings.easypaisa;
+            document.getElementById('set-bank').value = settings.bank;
+
+            // Render Plans in Admin
+            const plansDiv = document.getElementById('admin-plans-list');
+            plansDiv.innerHTML = '';
+            getPricing().forEach(p => {
+                plansDiv.innerHTML += `
+                    <div class="bg-slate-800 p-4 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-bold text-white">${p.name}</h4>
+                            <p class="text-xs text-slate-400">$${p.usd} / Rs. ${p.pkr}</p>
+                        </div>
+                        <button onclick="deletePlan('${p.id}')" class="text-red-400 hover:text-red-300 text-xs"><i class="fa-solid fa-trash"></i> Delete</button>
+                    </div>
+                `;
+            });
+        }
+
+        function updateOrderStatus(id, status) {
+            let orders = getOrders();
+            let o = orders.find(x => x.id === id);
+            if (o) {
+                o.status = status;
+                localStorage.setItem('sk_agency_orders', JSON.stringify(orders));
+                renderAdminDashboard();
+            }
+        }
+
+        function handleAddNewPlan(e) {
+            e.preventDefault();
+            let plans = getPricing();
+            plans.push({
+                id: Date.now().toString(),
+                name: document.getElementById('new-plan-name').value,
+                usd: document.getElementById('new-plan-usd').value,
+                pkr: document.getElementById('new-plan-pkr').value,
+                features: document.getElementById('new-plan-features').value.split(',')
+            });
+            localStorage.setItem('sk_pricing', JSON.stringify(plans));
+            renderPublicSite();
+            renderAdminDashboard();
+            alert('Plan Added!');
+        }
+
+        function deletePlan(id) {
+            let plans = getPricing().filter(p => p.id !== id);
+            localStorage.setItem('sk_pricing', JSON.stringify(plans));
+            renderPublicSite();
+            renderAdminDashboard();
+        }
+
+        function handleSaveSettings(e) {
+            e.preventDefault();
+            const newSettings = {
+                phone: document.getElementById('set-phone').value,
+                email: document.getElementById('set-email').value,
+                easypaisa: document.getElementById('set-easypaisa').value,
+                bank: document.getElementById('set-bank').value
+            };
+            localStorage.setItem('sk_settings', JSON.stringify(newSettings));
+            renderPublicSite();
+            alert('Settings Saved!');
+        }
+
+        function clearAllOrders() {
+            if (confirm('Clear all client orders?')) {
+                localStorage.removeItem('sk_agency_orders');
+                renderAdminDashboard();
+            }
+        }
+
+        function exportDataJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(localStorage));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "sk_agency_backup.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+    </script>
+</body>
+</html>
